@@ -129,10 +129,16 @@
 	<footer>2020-10-02&nbsp&nbsp备案号：粤xxxx</footer>
 <!--music-->
 	<div class="music">
-		<audio autoplay controls loop preload="auto">
-			<source src="music/bg.mp3">
-      	你的浏览器版本太低,不支持播放music
-	</audio>
+		<audio autoplay controls loop preload="auto" id="musician" src="music/1.mp3">
+		</audio>
 	</div>
+	
+	<script>
+		//生成随机数字
+		a = Math.floor(Math.random()*5);
+		all = "music/"+a+".mp3";
+		console.log(all);
+		document.getElementById("musician").src = all;
+	</script>
 </body>
 </html>
